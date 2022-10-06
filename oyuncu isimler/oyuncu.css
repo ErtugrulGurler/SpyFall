@@ -1,0 +1,9 @@
+body{
+    margin-top: 50px;
+    text-align: center;
+    background-color: rgba(rgb(70, 15, 15));
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

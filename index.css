@@ -42,3 +42,9 @@ h1 {
     text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
     font-size: 70px;
 }
+/*#spyCount > button:active{
+    background-color: red;
+}
+#playerCount > button:active{
+    background-color: red;
+}*/
