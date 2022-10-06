@@ -1,0 +1,44 @@
+body{
+    margin-top: 50px;
+    text-align: center;
+    background-color: rgba(rgb(70, 15, 15));
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#playerCount{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    
+    width: 100vmin;
+    height: 100px;
+    
+}
+#playerCount > button{
+    padding: 2px 20px 2px 20px;
+    border: 1px red solid;
+    font-size: 60px;
+    background-color: bisque;
+    border-radius: 20px;
+}
+#spyCount{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+
+    width: 40vmin;
+    height: 100px;
+}
+#spyCount > button{
+    padding: 2px 20px 2px 20px;
+    border: 1px red solid;
+    font-size: 60px;
+    background-color: bisque;
+    border-radius:20px;
+}
+h1 {
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    font-size: 70px;
+}
