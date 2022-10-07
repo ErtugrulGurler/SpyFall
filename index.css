@@ -63,3 +63,9 @@ h1 {
     background-color: #ddd;
     color: black;
 }
+#isimler{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

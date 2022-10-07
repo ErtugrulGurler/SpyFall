@@ -11,25 +11,17 @@ let casus3 = document.getElementById("spy3");
 
 let oyuncuListe = [oyuncu3,oyuncu4,oyuncu5,oyuncu6,oyuncu7,oyuncu8];
 let casusListe = [casus1,casus2,casus3];
-function paragrafEkle(){
-    
-}
+
+
 function oyuncuSayısı(){
-    /*for (let i=0;i<=7;i++){
+    for (let i=0;i<=5;i++){
         let oyuncu = oyuncuListe[i];
         if(oyuncu.style.backgroundColor==="red"){
-            return i+1;
+            return i+3;
         }
-    }*/
+    }return 0;
 }
-function casusSayısı(){
-    /*for (let i=0;i<=2;i++){
-        let casus = casusListe[i];
-        if(casus.style.backgroundColor==="red"){
-            return i+1;
-        }
-    }*/
-}
+
 for (let i=0;i<=5;i++){
     let flag=false;
 
@@ -73,20 +65,37 @@ for (let i=0;i<=2;i++){
     }
 });}
 
-function oyuncuCasusSec(){
+function next(){
+    let flag1=false;
     for(let i=0;i<=5;i++){
-        let flag1=false;
         if(oyuncuListe[i].style.backgroundColor==="red"){
             flag1=true;
         }
     }
+    let flag2=false;
     for(let i=0;i<=2;i++){
-        let flag2=false;
         if(casusListe[i].style.backgroundColor==="red"){
             flag2=true;
         }
     }
-    if(flag1===false||flag2===false){
-        alert("Oyuncu-casus seçilmedi.")
+    if(flag1==false||flag2==false){
+        alert("Oyuncu-casus seçilmedi.");
+    }else{paragrafEkle();}
+}
+let container = document.getElementById("isimler");
+function paragrafEkle(){
+    let toplam = oyuncuSayısı();
+    for(let i=0;i<toplam;i++){
+    var input = document.createElement("input");
+    input.type = "text";
+    input.className = "text_"+i;
+    input.style.marginTop="10px";
+    input.style.width="300px";
+    input.style.height="100px";
+    input.style.fontSize="50px";
+    
+    input.style.border="5px solid red";
+    
+    container.appendChild(input);
     }
 }
