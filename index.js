@@ -86,16 +86,40 @@ let container = document.getElementById("isimler");
 function paragrafEkle(){
     let toplam = oyuncuSayısı();
     for(let i=0;i<toplam;i++){
-    var input = document.createElement("input");
-    input.type = "text";
-    input.className = "text_"+i;
+        let input = document.createElement("input");
+        input.type = "text";
+    input.id = "text_"+i;
     input.style.marginTop="10px";
-    input.style.width="300px";
+    input.style.width="600px";
     input.style.height="100px";
-    input.style.fontSize="50px";
-    
-    input.style.border="5px solid red";
+    input.style.fontSize="80px";
+    input.style.textAlign="center";
+    input.style.border="5px solid brown";
+    input.style.fontFamily="'Permanent Marker', cursive";
+    input.style.borderRadius="30px";
     
     container.appendChild(input);
+    }
+}
+let list = [];
+function basla(){
+    let toplam = oyuncuSayısı();
+    
+    for(let i=0;i<toplam;i++){
+        let isim = document.getElementById("text_"+i);
+        let value = isim.value;
+        container.removeChild(isim);
+        let text = document.createElement("h1");
+        text.id = "text_"+i;
+        text.style.marginTop="10px";
+        text.style.width="600px";
+        text.style.height="100px";
+        text.style.fontSize="80px";
+        text.style.textAlign="center";
+        text.style.border="5px solid brown";
+        text.style.fontFamily="'VT323', monospace";
+        text.style.borderRadius="30px";
+        container.appendChild(text);
+        text.innerHTML=value;
     }
 }
