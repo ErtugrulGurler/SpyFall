@@ -89,9 +89,9 @@ function paragrafEkle(){
         let input = document.createElement("input");
         input.type = "text";
     input.id = "text_"+i;
-    input.style.marginTop="10px";
-    input.style.width="600px";
-    input.style.height="100px";
+    input.style.marginTop="5px";
+    input.style.width="800px";
+    input.style.height="170px";
     input.style.fontSize="80px";
     input.style.textAlign="center";
     input.style.border="5px solid brown";
@@ -109,17 +109,50 @@ function basla(){
         let isim = document.getElementById("text_"+i);
         let value = isim.value;
         container.removeChild(isim);
-        let text = document.createElement("h1");
-        text.id = "text_"+i;
-        text.style.marginTop="10px";
-        text.style.width="600px";
-        text.style.height="100px";
-        text.style.fontSize="80px";
-        text.style.textAlign="center";
-        text.style.border="5px solid brown";
-        text.style.fontFamily="'VT323', monospace";
-        text.style.borderRadius="30px";
-        container.appendChild(text);
-        text.innerHTML=value;
+        let button = document.createElement("button");
+        button.type="button";
+        button.RoleName="btn btn-info btn-lg";
+        button.id = "button_"+i;
+        button.setAttribute("data-toggle", "modal");
+        button.setAttribute("data-target", "#myModal_"+i);
+        button.style.marginTop="5px";
+        button.style.width="800px";
+        button.style.height="100px";
+        button.style.fontSize="100px";
+        button.style.textAlign="center";
+        button.style.border="5px solid brown";
+        button.style.fontFamily="'VT323', monospace";
+        button.style.borderRadius="30px";
+        button.style.backgroundColor="brown";
+        button.style.color="white";
+        button.style.paddingBottom="150px";
+        container.appendChild(button);
+        button.innerHTML=value;
+
+        todo
+        h4String = "class_text"+i;
+        pString = "role_text"+i;
+        h4Class.id = h4String;
+        pRole.id = pString;
+        button.addEventListener("click", randomClassRole(h4String,pString));
     }
+}
+const Asker = ["Bomba İmha Uzmanı","Er","Sivil Polis"];
+const Esnaf = ["Manav","Balıkçı","Elektrikçi"];
+const Politikacı = ["Parti Başkanı","Ekonomi Bakanı","Milli Savunma Bakanı"];
+const classList = [Asker,Esnaf,Politikacı];
+const classListStrings = ["Asker","Esnaf","Politikacı"];
+
+function randomClassRole(class_string,role_string){
+    let class_text = document.getElementById(class_string);
+    let role_text = document.getElementById(role_string);
+    let random = randomNum();
+    role_text.innerHTML = classList[random][random];
+    class_text.innerHTML = classListStrings[random];
+}
+//function randomRole(){
+  //  let randomRole = document.getElementById("randomRole");
+//}
+function randomNum(){
+    return Math.floor(Math.random()*classList.length);
 }
