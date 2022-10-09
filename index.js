@@ -101,10 +101,9 @@ function paragrafEkle(){
     container.appendChild(input);
     }
 }
-let list = [];
+
 function basla(){
     let toplam = oyuncuSayısı();
-    
     for(let i=0;i<toplam;i++){
         let isim = document.getElementById("text_"+i);
         let value = isim.value;
@@ -128,31 +127,26 @@ function basla(){
         button.style.paddingBottom="150px";
         container.appendChild(button);
         button.innerHTML=value;
+        let first = "class"+i;
+        let second = "role"+i;
 
-        todo
-        h4String = "class_text"+i;
-        pString = "role_text"+i;
-        h4Class.id = h4String;
-        pRole.id = pString;
-        button.addEventListener("click", randomClassRole(h4String,pString));
+        button.addEventListener("click", randomClassRole(first,second));
     }
 }
-const Asker = ["Bomba İmha Uzmanı","Er","Sivil Polis"];
+const Asker = ["Bomba Imha Uzmanı","Er","Sivil Polis"];
 const Esnaf = ["Manav","Balıkçı","Elektrikçi"];
-const Politikacı = ["Parti Başkanı","Ekonomi Bakanı","Milli Savunma Bakanı"];
-const classList = [Asker,Esnaf,Politikacı];
-const classListStrings = ["Asker","Esnaf","Politikacı"];
+const Politikaci = ["Parti Başkanı","Ekonomi Bakanı","Milli Savunma Bakanı"];
+const classList = [Asker,Esnaf,Politikaci];
+const classListStrings = ["Asker","Esnaf","Politikaci"];
+let random = randomNum();
 
 function randomClassRole(class_string,role_string){
     let class_text = document.getElementById(class_string);
     let role_text = document.getElementById(role_string);
-    let random = randomNum();
-    role_text.innerHTML = classList[random][random];
+    let randomRole=randomNum();
     class_text.innerHTML = classListStrings[random];
+    role_text.innerHTML = classList[random][randomRole];
 }
-//function randomRole(){
-  //  let randomRole = document.getElementById("randomRole");
-//}
 function randomNum(){
     return Math.floor(Math.random()*classList.length);
 }
