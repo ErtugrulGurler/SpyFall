@@ -142,21 +142,30 @@ function basla(){
     let casusSayı = casusSayısı();
     for (let x=0;x<casusSayı;x++){casusSec();}
 }
-const Asker = ["Bomba Imha Uzmanı","Er","Sivil Polis"];
-const Esnaf = ["Manav","Balıkçı","Elektrikçi"];
-const Politikaci = ["Parti Başkanı","Ekonomi Bakanı","Milli Savunma Bakanı"];
+const Asker = ["asker0","asker1","asker2","asker3","asker4","asker5","asker6","asker7","asker8","asker9","asker10"];
+const Esnaf = ["esnaf0","esnaf1","esnaf2","esnaf3","esnaf4","esnaf5","esnaf6","esnaf7","esnaf8","esnaf9","esnaf10"];
+const Politikaci = ["politikacı0","politikacı1","politikacı2","politikacı3","politikacı4","politikacı5","politikacı6","politikacı7","politikacı8","politikacı9","politikacı10"];
 const classList = [Asker,Esnaf,Politikaci];
 const classListStrings = ["Asker","Esnaf","Politikaci"];
-let random = randomNum();
+let random = randomNum(classList.length);
 
 function randomClassRole(class_string,role_string){
     let class_text = document.getElementById(class_string);
     let role_text = document.getElementById(role_string);
-    let randomRole=randomNum();
     class_text.innerHTML = classListStrings[random];
+    let num=classList[random].length;
+    let randomRole=randomNum(num);
+    
+    
+    
+    role_text.innerHTML = classList[random][randomRole];
+    classList[random].splice(randomRole,1);
+
+
+
+
     class_text.style.fontSize = "30px";
     class_text.style.fontWeight = "800";
-    role_text.innerHTML = classList[random][randomRole];
     role_text.style.fontSize = "30px";
     role_text.style.fontWeight = "800";
     
@@ -218,8 +227,8 @@ let closeBtn7 = document.getElementById("closeBtn_7").addEventListener("click",f
     button.style.backgroundColor="rgba(255,0,0,0.8)";
 });
     
-function randomNum(){
-    return Math.floor(Math.random()*classList.length);
+function randomNum(num){
+    return Math.floor(Math.random()*num);
 }
 function randomCasusNum(){
     let num = oyuncuSayısı();
