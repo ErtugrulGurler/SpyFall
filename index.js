@@ -1,4 +1,3 @@
-const colors = ['red','white'];
 let oyuncu3 = document.getElementById("player3");
 let oyuncu4 = document.getElementById("player4");
 let oyuncu5 = document.getElementById("player5");
@@ -7,10 +6,9 @@ let oyuncu7 = document.getElementById("player7");
 let oyuncu8 = document.getElementById("player8");
 let casus1 = document.getElementById("spy1");
 let casus2 = document.getElementById("spy2");
-let casus3 = document.getElementById("spy3");
 
 let oyuncuListe = [oyuncu3,oyuncu4,oyuncu5,oyuncu6,oyuncu7,oyuncu8];
-let casusListe = [casus1,casus2,casus3];
+let casusListe = [casus1,casus2];
 
 
 function oyuncuSayısı(){
@@ -18,6 +16,15 @@ function oyuncuSayısı(){
         let oyuncu = oyuncuListe[i];
         if(oyuncu.style.backgroundColor==="red"){
             return i+3;
+        }
+    }return 0;
+}
+
+function casusSayısı(){
+    for (let i=0;i<=1;i++){
+        let casus = casusListe[i];
+        if(casus.style.backgroundColor==="red"){
+            return i+1;
         }
     }return 0;
 }
@@ -43,13 +50,13 @@ for (let i=0;i<=5;i++){
             }
     }
 });}
-for (let i=0;i<=2;i++){
+for (let i=0;i<=1;i++){
     let flag=false;
 
     casusListe[i].addEventListener('click', function onClick() {
     if(flag===false){
     casusListe[i].style.backgroundColor = "red";
-    for(let x=0;x<=2;x++){
+    for(let x=0;x<=1;x++){
         if(casusListe[i]!==casusListe[x]){
             casusListe[x].disabled = true;
             flag =true;
@@ -57,7 +64,7 @@ for (let i=0;i<=2;i++){
         }
     }
     else {
-        for(let x=0;x<=2;x++){
+        for(let x=0;x<=1;x++){
                 casusListe[x].disabled = false;
                 flag =false;
                 casusListe[i].style.backgroundColor = "bisque";
@@ -73,7 +80,7 @@ function next(){
         }
     }
     let flag2=false;
-    for(let i=0;i<=2;i++){
+    for(let i=0;i<=1;i++){
         if(casusListe[i].style.backgroundColor==="red"){
             flag2=true;
         }
@@ -129,9 +136,11 @@ function basla(){
         button.innerHTML=value;
         let first = "class"+i;
         let second = "role"+i;
-
+    
         button.addEventListener("click", randomClassRole(first,second));
     }
+    let casusSayı = casusSayısı();
+    for (let x=0;x<casusSayı;x++){casusSec();}
 }
 const Asker = ["Bomba Imha Uzmanı","Er","Sivil Polis"];
 const Esnaf = ["Manav","Balıkçı","Elektrikçi"];
@@ -145,8 +154,74 @@ function randomClassRole(class_string,role_string){
     let role_text = document.getElementById(role_string);
     let randomRole=randomNum();
     class_text.innerHTML = classListStrings[random];
+    class_text.style.fontSize = "30px";
+    class_text.style.fontWeight = "800";
     role_text.innerHTML = classList[random][randomRole];
+    role_text.style.fontSize = "30px";
+    role_text.style.fontWeight = "800";
+    
 }
+function casusSec(){
+    let casusNum=randomCasusNum();
+    let casusHeader = document.getElementById("class"+casusNum);
+    let casusParagraph = document.getElementById("role"+casusNum);
+    if(casusHeader.innerHTML == "Casus"){casusSec();}
+    casusHeader.innerHTML = "Casus";
+    casusHeader.style.color = "red";
+    casusHeader.style.fontSize = "40px";
+    casusHeader.style.fontWeight = "800";
+    casusParagraph.innerHTML = "? ? ? ? ? ? ?";
+    casusParagraph.style.color = "red";
+    casusParagraph.style.fontSize = "40px";
+    casusParagraph.style.fontWeight = "800";
+}
+
+let closeBtn0 = document.getElementById("closeBtn_0").addEventListener("click",function(){
+    let button = document.getElementById("button_0");
+    button.disabled=true;
+    button.style.backgroundColor="rgba(255,0,0,0.8)";
+    
+});
+let closeBtn1 = document.getElementById("closeBtn_1").addEventListener("click",function(){
+    let button = document.getElementById("button_1")
+    button.disabled=true;
+    button.style.backgroundColor="rgba(255,0,0,0.8)";
+});
+let closeBtn2 = document.getElementById("closeBtn_2").addEventListener("click",function(){
+    let button = document.getElementById("button_2")
+    button.disabled=true;
+    button.style.backgroundColor="rgba(255,0,0,0.8)";
+});
+let closeBtn3 = document.getElementById("closeBtn_3").addEventListener("click",function(){
+    let button = document.getElementById("button_3")
+    button.disabled=true;
+    button.style.backgroundColor="rgba(255,0,0,0.8)";
+});
+let closeBtn4 = document.getElementById("closeBtn_4").addEventListener("click",function(){
+    let button = document.getElementById("button_4")
+    button.disabled=true;
+    button.style.backgroundColor="rgba(255,0,0,0.8)";
+});
+let closeBtn5 = document.getElementById("closeBtn_5").addEventListener("click",function(){
+    let button = document.getElementById("button_5")
+    button.disabled=true;
+    button.style.backgroundColor="rgba(255,0,0,0.8)";
+});
+let closeBtn6 = document.getElementById("closeBtn_6").addEventListener("click",function(){
+    let button = document.getElementById("button_6")
+    button.disabled=true;
+    button.style.backgroundColor="rgba(255,0,0,0.8)";
+});
+let closeBtn7 = document.getElementById("closeBtn_7").addEventListener("click",function(){
+    let button = document.getElementById("button_7")
+    button.disabled=true;
+    button.style.backgroundColor="rgba(255,0,0,0.8)";
+});
+    
 function randomNum(){
     return Math.floor(Math.random()*classList.length);
+}
+function randomCasusNum(){
+    let num = oyuncuSayısı();
+    return Math.floor(Math.random()*num);
 }
