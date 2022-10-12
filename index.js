@@ -142,11 +142,28 @@ function basla(){
     let casusSayı = casusSayısı();
     for (let x=0;x<casusSayı;x++){casusSec();}
 }
-const Asker = ["asker0","asker1","asker2","asker3","asker4","asker5","asker6","asker7","asker8","asker9","asker10"];
-const Esnaf = ["esnaf0","esnaf1","esnaf2","esnaf3","esnaf4","esnaf5","esnaf6","esnaf7","esnaf8","esnaf9","esnaf10"];
-const Politikaci = ["politikacı0","politikacı1","politikacı2","politikacı3","politikacı4","politikacı5","politikacı6","politikacı7","politikacı8","politikacı9","politikacı10"];
-const classList = [Asker,Esnaf,Politikaci];
-const classListStrings = ["Asker","Esnaf","Politikaci"];
+const Ordugah = ["Er","General","İstihbarat Memuru","Koalisyon Askeri","Bomba İmha Uzmanı","Sıhıye","Taktisyen","Aşçı"];
+const Cami = ["Hoca","Müezzin","Dilenci","Cemaat","Günahkar","Kuran Hocası","Talebe","Temizlikçi"];
+const Kumarhane = ["Barmen","Güvenlik Görevlisi","Kurupiyer","Müdür","Müdür Yardımcısı","Kumarbaz","Garson","Temizlikçi"];
+const Kumsal = ["Garson","Sörfçü","Can Kurtaran","Hırsız","Tatilci","Fotoğrafçı","Dondurma Satıcısı","Balıkçı"];
+const Banka = ["Güvenlik Görevlisi","Müşteri Temsilcisi","Zırhlı Araç Satıcısı","Müdür","Müşteri","Hırsız","Gişe Memuru","Hademe"];
+const EsnafOfisi = ["Elektrikçi","Avukat","Balıkçı","Bakkal","Tedarikçi","Kebapçı","Taksici","Kuruyemişçi"];
+const TeröristKampı = ["Taktisyen","Casus","Uyuşturucu Tüccarı","Tedarikçi","Rehber","Terörist","Savaş Ağası","Bombacı"];
+const Tiyatro = ["Eleştirmen","Suflör","Kasiyer","İzleyici","Yönetmen","Aktör","Sahne Görevlisi","Makyöz"];
+const Akademi = ["Profesör","Araştırma Görevlisi","Öğrenci","Dekan","Hademe","Aşçı","Güvenlik Görevlisi","Kantinci"];
+const YolcuGemisi = ["Yolcu","Mürettebat Üyesi","Operatör","Dümenci","Garson","Kaptan","Aşçı","Müzisyen"];
+const Havalimanı = ["Birinci Sınıf Yolcu","Güvenlik Görevlisi","Pilot","Hostes","Yolcu","Kule Operatörü","Marshall","Pasaport Polisi"];
+const KorsanGemisi = ["2.Kaptan","Avcı","Haydut","Haritacı","Aşçı","Dümenci","Korsan","Kaptan"];
+const Saray = ["Padişah","Harem Ağası","Vezir","Şeyhülislam","Cariye","Sultan","Muhafız","Elçi"];
+const Süpermarket=["Müşteri","Kasiyer","Kasap","Hademe","Güvenlik Görevlisi","Tedarikçi","Kantarcı","Depo Görevlisi"];
+const Denizaltı=["Sonar Teknisyeni","Navigatör","Operatör","Denizci","Elektrik Teknisyeni","Komutan","Aşçı","Kaptan"];
+const Uzayİstasyonu=["Mühendis","Uzaylı","Uzay Gezgini","Pilot","Kumandan","Bilim İnsanı","Doktor","Ekip Üyesi"];
+const Tamirhane=["Boyacı","Araba Yıkayıcı","Araç Sahibi","Motor Ustası","Elektirikçi","Egzozcu","Tekerlekçi","Çırak"];
+
+
+const classList = [Ordugah,Cami,Kumarhane,Kumsal,Banka,EsnafOfisi,TeröristKampı,Tiyatro,Akademi,YolcuGemisi,Havalimanı,KorsanGemisi,Saray,Süpermarket,Denizaltı,Uzayİstasyonu,Tamirhane];
+const classListStrings = ["Ordugah","Cami","Kumarhane","Kumsal","Banka","Esnaf Ofisi","Terörist Kampı","Tiyatro","Akademi","Yolcu Gemisi","Havalimanı","Korsan Gemisi","Saray","Süpermarket","Denizaltı","Uzay İstasyonu","Tamirhane"];
+
 let random = randomNum(classList.length);
 
 function randomClassRole(class_string,role_string){
