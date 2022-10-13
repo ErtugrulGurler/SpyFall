@@ -99,3 +99,17 @@ h1 {
     align-items: center;
     flex-direction: column;
 }
+#listeHeader {
+    text-shadow: 0 0 3px #422020, 0 0 5px #0000FF;
+    font-size: 70px;
+}
+#liste{
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+    width: 800px;
+    height: 700px;
+
+    font-weight: 800;
+    font-size: 20px;
+}

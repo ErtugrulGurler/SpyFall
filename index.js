@@ -172,10 +172,34 @@ const YolcuTreni = ["Tren Şefi","Makinist","Hareket Memuru","Operatör","Kondü
 const Polisİstastonu = ["Dedektif","Muhasebeci","Avukat","Gazeteci","Kriminalog","Suçlu","Polis","Devriye Memuru"];
 const Restoran = ["Aşçı","Garson","Şef Garson","Müzisyen","Gurme","Müşteri","Güvenlik Görevlisi","Tedarikçi"];
 const Okul = ["Sınıf Öğretmeni","Rehber Öğretmen","Beden Öğretmeni","Müdür","Hademe","Müdür Yardımcısı","Servis Şöförü","Servis Hostesi"];
+const Park = ["Ebeveyn","Uslu Çocuk","Mızmız Çocuk","Ergen","Güvelik Görevlisi","Hademe","Pamukşeker Satıcısı","Simitçi"];
+const SanatMüzesi = ["Rehber","Tarihçi","Sanat Eleştirmeni","Fotoğrafçı","Turist","Öğrenci","Biletçi","Ziyaretçi"];
+const ŞekerFabrikası = ["Pasta Şefi","Tedarikçi","Makine Operatörü","Tadımcı","Müfettiş","Şekerçi","Makinist","Müdür"];
+const KediŞovu = ["Jüri","Veteriner","Kedi Sahibi","Kedi","Hayvan Sever","Kedili Deli Kadın","Eğitmen","Biletçi"];
+const Cenaze = ["Hoca","Gasilhane Çalışanı","Ölenin Eşi","Ölenin Kardeşi","Ölü","Mezarcı","Ağlayan Kişi","Tabut Taşıyan"];
+const Maden = ["Güvenlik Müfettişi","Madenci","Gözetmen","Kamyon Operatörü","Toprak Delici","Koordinatör","Patlatma Müdendisi","Katı Atık Mühendisi"];
+const İnşaat = ["Müteahhit","Vinç Operatörü","Elektrikçi","Mühendis","Mimar","İnşaat Ustası","İnşaat İşçisi","Yıkım Mühendisi"];
+const OyunToplantısı = ["Ünlü Oyuncu","Oyun Yapımcısı","Çocuk","Ziyaretçi","Koleksiyoncu","Oyun Satıcısı","Oyun Bağımlısı","Vlog Çeken"];
+const Benzinİstasyonu = ["Market Çalışanı","Cam Silen","Araba Yıkayan","Tekerlek Şişiren","Müşteri","Pompacı","Tedarikçi","Kamyoncu"];
+const Liman = ["Denizci","Kargo Müfettişi","Kargo Taşıyan","Kargo Sorumlusu","Kaçakçı","Balıkçı","Kaptan","İhracatçı"];
+const HokeyStadyumu = ["Hokey Hayranı","Doktor","Hokey Oyuncusu","Satıcı","Güvenlik Görevlisi","Kaleci","Koç","Seyirci"];
+const Hapishane = ["Masum Suçlanan","Koruma","Ziyaretçi","Avukat","Kapıcı","Gardiyan","Hapisane Memuru","Deli"];
+const CazKulubü= ["VİP","Barmen","Dansçı","Caz Seven","Şarkıcı","Saksafoncu","Piyanist","Davulcu"];
+const Kütüphane= ["Yaşlı Adam","Yazar","Gönüllü","Öğrenci","Kütüphaneci","Sesli Konuşan","Kitap Kurdu","İnek Öğrenci"];
+const GeceKlübü= ["Utangaç Dansçı","Güvenlik Görevlisi","Model","Parti Manyağı","Sarhoş","Parti Kızı","Tedarikçi","Barmen"];
+const YarışPisti= ["Takım Kaptanı","Sürücü","Mühendis","Pist Ekip Üyesi","Spiker","İzleyici","Yemek Satıcısı","Tamirci"];
+const Huzurevi= ["Hasta Yakını","Yaşlı İnsan","Hemşire","Hademe","İlaç Dağıtıcı","Psikolog","Aşçı","Ziyaretçi"];
+const Konser= ["Dansçı","Solist","Hayran","Gitarist","Davulcu","Piyanist","Teknik Destek Ekibi Üyesi","Müşteri"];
+const GeziOtobüsü= ["Yaşlı Adam","Turist","Sürücü","Mız Mız Çocuk","Tur Rehberi","Fotoğrafçı","Kaybolmuş Yolcu","Hırsız"];
+const Stadyum= ["Doktor","Sporcu","Hakem","İzleyici","Antrenör","Engelli Koşu Koşucusu","100 Metre Koşucusu","Fizyoterapist"];
+const Metro= ["Yolcu Kontrol Memuru","Anons Memuru","Metro Şöförü","Güvenlik Görevlisi","Hademe","Tamirci","Yolcu","Mız Mız Çocuk"];
+const BirleşmişMilletler= ["Diplomat","Tercüman","Uyuklayan Delege","Gazeteci","Koruma","Genel Sekreter","Danışman","Güvenlik Görevlisi"];
+const ÜzümBağı= ["Üzüm Taşıyıcısı","Zengin Bağ Sahibi","Çiftçi","Uşak","İhracatçı","Şarap Üreticisi","Gurme","Bahçıvan"];
+const Düğün= ["Baldız","Mekan Sahibi","Aşçı","Garson","Kayın Valide","Kayın Peder","Damat","Gelin"];
+const HayvanatBahçesi= ["Bakıcı","Ziyaretçi","Fotoğrafçı","Çocuk","Veteriner","Turist","Kasiyer","Zoolog"];
 
-
-const classList = [Ordugah,Cami,Kumarhane,Kumsal,Banka,EsnafOfisi,TeröristKampı,Tiyatro,Akademi,YolcuGemisi,Havalimanı,KorsanGemisi,Saray,Süpermarket,Denizaltı,Uzayİstasyonu,Tamirhane,Katedral,SirkÇadırı,İşPartisi,HaçlıOrdusu,Spa,Büyükelçilik,Hastane];
-const classListStrings = ["Ordugah","Cami","Kumarhane","Kumsal","Banka","Esnaf Ofisi","Terörist Kampı","Tiyatro","Akademi","Yolcu Gemisi","Havalimanı","Korsan Gemisi","Saray","Süpermarket","Denizaltı","Uzay İstasyonu","Tamirhane","Katedral","Sirk Çadırı","İş Partisi","Haçlı Ordusu","Spa","Büyükelçilik","Hastane"];
+const classList = [Ordugah,Cami,Kumarhane,Kumsal,Banka,EsnafOfisi,TeröristKampı,Tiyatro,Akademi,YolcuGemisi,Havalimanı,KorsanGemisi,Saray,Süpermarket,Denizaltı,Uzayİstasyonu,Tamirhane,Katedral,SirkÇadırı,İşPartisi,HaçlıOrdusu,Spa,Büyükelçilik,Hastane,Otel,FilmStüdyosu,YolcuTreni,Polisİstastonu,Restoran,Okul,Park,SanatMüzesi,ŞekerFabrikası,KediŞovu,Cenaze,Maden,İnşaat,OyunToplantısı,Benzinİstasyonu,Liman,HokeyStadyumu,Hapishane,CazKulubü,Kütüphane,GeceKlübü,YarışPisti,Huzurevi,Konser,GeziOtobüsü,Stadyum,Metro,BirleşmişMilletler,ÜzümBağı,Düğün,HayvanatBahçesi];
+const classListStrings = ["Ordugah","Cami","Kumarhane","Kumsal","Banka","Esnaf Ofisi","Terörist Kampı","Tiyatro","Akademi","Yolcu Gemisi","Havalimanı","Korsan Gemisi","Saray","Süpermarket","Denizaltı","Uzay İstasyonu","Tamirhane","Katedral","Sirk Çadırı","İş Partisi","Haçlı Ordusu","Spa","Büyükelçilik","Hastane","Otel","Film Stüdyosu","Yolcu Treni","Polis İstastonu","Restoran","Okul","Park","Sanat Müzesi","Şeker Fabrikası","Kedi Şovu","Cenaze","Maden","İnşaat","Oyun Toplantısı","Benzin İstasyonu","Liman","Hokey Stadyumu","Hapishane","Caz Kulübü","Kütüphane","Gece Klübü","Yarış Pisti","Huzurevi","Konser","Gezi Otobüsü","Stadyum","Metro","Birleşmiş Milletler","Üzüm Bağı","Düğün","Hayvanat Bahçesi"];
 
 
 
@@ -264,4 +288,26 @@ function randomNum(num){
 function randomCasusNum(){
     let num = oyuncuSayısı();
     return Math.floor(Math.random()*num);
+}
+let length = classListStrings.length;
+let length1 = classList.length;
+console.log(length);
+console.log(length1);
+liste1=document.getElementById("liste1");
+for(let x=0;x<length/3;x++){
+    let listeOne = document.createElement("li");
+    listeOne.innerHTML=classListStrings[x];
+    liste1.appendChild(listeOne);
+}
+liste2=document.getElementById("liste2");
+for(let x=Math.floor(length/3)+1;x<Math.floor(2*length/3);x++){
+    let listeTwo = document.createElement("li");
+    listeTwo.innerHTML=classListStrings[x];
+    liste2.appendChild(listeTwo);
+}
+liste3=document.getElementById("liste3");
+for(let x=Math.floor(2*length/3);x<length;x++){
+    let listeThree = document.createElement("li");
+    listeThree.innerHTML=classListStrings[x];
+    liste3.appendChild(listeThree);
 }
