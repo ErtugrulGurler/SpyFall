@@ -159,13 +159,27 @@ const Süpermarket=["Müşteri","Kasiyer","Kasap","Hademe","Güvenlik Görevlisi
 const Denizaltı=["Sonar Teknisyeni","Navigatör","Operatör","Denizci","Elektrik Teknisyeni","Komutan","Aşçı","Kaptan"];
 const Uzayİstasyonu=["Mühendis","Uzaylı","Uzay Gezgini","Pilot","Kumandan","Bilim İnsanı","Doktor","Ekip Üyesi"];
 const Tamirhane=["Boyacı","Araba Yıkayıcı","Araç Sahibi","Motor Ustası","Elektirikçi","Egzozcu","Tekerlekçi","Çırak"];
+const Katedral = ["Rahip","Rahibe","Dilenci","Cemaat","Günahkar","Koro Üyesi","Turist","Sponsor"];
+const SirkÇadırı = ["Akrobat","Hayvan Terbiyecisi","Sihirbaz","Ziyaretçi","Ateş Yutan","Sunucu","Palyaço","Hokkabaz"];
+const İşPartisi = ["Ev Sahibi","Menajer","Davetsiz Misafir","Şovmen","Sekreter","Muhasebeci","Kurye","İş Ortağı"];
+const HaçlıOrdusu = ["Keşiş","Hizmetçi","Rahip","Okçu","Şövalye","Esir","Papa","Soylu"];
+const Spa = ["Stilist","Masöz","Manikürcü","Makyöz","Dermatolog","Güzellik Uzmanı","Müşteri","Rezervasyon Görevlisi"];
+const Büyükelçilik = ["Güvenlik Görevlisi","Sekreter","Büyükelçi","Devlet Memuru","Turist","Mülteci","Diplomat","Çevirmen"];
+const Hastane = ["Hemşire","Doktor","Anestezist","Stajyer","Hasta","Terapist","Cerrah","Hademe"];
+const Otel = ["Rezervasyon Görevlisi","Güvenlik Görevlisi","Müdür","Temizlikçi","Müşteri","Barmen","Garson","Aşçı"];
+const FilmStüdyosu = ["Set Fotoğrafçısı","Şive Koçu","Figüran","Kameraman","Kostüm tasarımcısı","Animatör","Başrol oyuncusu","Dublör"];
+const YolcuTreni = ["Tren Şefi","Makinist","Hareket Memuru","Operatör","Kondüktör","İstasyon Şefi","Demiryolu Bakımcısı","Bagaj Memuru"];
+const Polisİstastonu = ["Dedektif","Muhasebeci","Avukat","Gazeteci","Kriminalog","Suçlu","Polis","Devriye Memuru"];
+const Restoran = ["Aşçı","Garson","Şef Garson","Müzisyen","Gurme","Müşteri","Güvenlik Görevlisi","Tedarikçi"];
+const Okul = ["Sınıf Öğretmeni","Rehber Öğretmen","Beden Öğretmeni","Müdür","Hademe","Müdür Yardımcısı","Servis Şöförü","Servis Hostesi"];
 
 
-const classList = [Ordugah,Cami,Kumarhane,Kumsal,Banka,EsnafOfisi,TeröristKampı,Tiyatro,Akademi,YolcuGemisi,Havalimanı,KorsanGemisi,Saray,Süpermarket,Denizaltı,Uzayİstasyonu,Tamirhane];
-const classListStrings = ["Ordugah","Cami","Kumarhane","Kumsal","Banka","Esnaf Ofisi","Terörist Kampı","Tiyatro","Akademi","Yolcu Gemisi","Havalimanı","Korsan Gemisi","Saray","Süpermarket","Denizaltı","Uzay İstasyonu","Tamirhane"];
+const classList = [Ordugah,Cami,Kumarhane,Kumsal,Banka,EsnafOfisi,TeröristKampı,Tiyatro,Akademi,YolcuGemisi,Havalimanı,KorsanGemisi,Saray,Süpermarket,Denizaltı,Uzayİstasyonu,Tamirhane,Katedral,SirkÇadırı,İşPartisi,HaçlıOrdusu,Spa,Büyükelçilik,Hastane];
+const classListStrings = ["Ordugah","Cami","Kumarhane","Kumsal","Banka","Esnaf Ofisi","Terörist Kampı","Tiyatro","Akademi","Yolcu Gemisi","Havalimanı","Korsan Gemisi","Saray","Süpermarket","Denizaltı","Uzay İstasyonu","Tamirhane","Katedral","Sirk Çadırı","İş Partisi","Haçlı Ordusu","Spa","Büyükelçilik","Hastane"];
+
+
 
 let random = randomNum(classList.length);
-
 function randomClassRole(class_string,role_string){
     let class_text = document.getElementById(class_string);
     let role_text = document.getElementById(role_string);
