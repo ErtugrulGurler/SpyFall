@@ -131,7 +131,7 @@ function basla(){
         button.style.borderRadius="30px";
         button.style.backgroundColor="brown";
         button.style.color="white";
-        button.style.paddingBottom="150px";
+        button.style.paddingBottom="15px";
         container.appendChild(button);
         button.innerHTML=value;
         let first = "class"+i;
