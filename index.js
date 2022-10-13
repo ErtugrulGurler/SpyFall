@@ -97,9 +97,9 @@ function paragrafEkle(){
         input.type = "text";
     input.id = "text_"+i;
     input.style.marginTop="5px";
-    input.style.width="800px";
-    input.style.height="170px";
-    input.style.fontSize="80px";
+    input.style.width="600px";
+    input.style.height="120px";
+    input.style.fontSize="40px";
     input.style.textAlign="center";
     input.style.border="5px solid brown";
     input.style.fontFamily="'Permanent Marker', cursive";
@@ -122,9 +122,9 @@ function basla(){
         button.setAttribute("data-toggle", "modal");
         button.setAttribute("data-target", "#myModal_"+i);
         button.style.marginTop="5px";
-        button.style.width="800px";
+        button.style.width="600px";
         button.style.height="100px";
-        button.style.fontSize="100px";
+        button.style.fontSize="50px";
         button.style.textAlign="center";
         button.style.border="5px solid brown";
         button.style.fontFamily="'VT323', monospace";
